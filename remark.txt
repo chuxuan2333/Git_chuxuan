@@ -6,7 +6,7 @@ cd      打开目录
 ls      显示文件
 vi      编辑文件
 rm  	删除文件或目录
-
+cat     查看文件内容
 
 
 ###### Vim：######
@@ -25,5 +25,9 @@ w newfileName  写入新文件
 ########## Git操作：##########
 git init   初始化Git仓库
 git add filename
-git commit -m "remarks备注信息"
+git rm  filename
+git commit -m "备注信息"
+git log    查看commit各版本
+git reflog 查看commit历史命令
+git reset --hard HEAD~i  回退到第i版本
 
