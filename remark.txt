@@ -34,4 +34,11 @@ git diff filename 		查看修改的地方
 git diff HEAD --filename   	查看工作区与版本库中文件的区别
 git checkout -- filename 	用版本库中最新的文件替代工作区的文件
 git reset HEAD -- filename  	撤销暂存区中文件的修改并放回工作区
+git push origin master		将本地master分支推送到Github
 
+
+
+git remote add origin https://github.com/chuxuan2333/Git_chuxuan.git  
+将本地仓库与远程仓库关联起来.
+git push -u origin master
+第一次推送master分支时，加上了-u参数，Git不但会把本地的master分支内容推送的远程新的master分支，还会把本地的master分支和远程的master分支关联起来，在以后的推送或者拉取时就可以简化命令.
