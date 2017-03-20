@@ -1,33 +1,36 @@
 ######### 命令记录: #########
-mkdir   创建目录
-touch   创建文件
-pwd     显示当前目录
-cd      打开目录
-ls      显示文件
-vi      编辑文件
-rm  	删除文件或目录
-cat     查看文件内容
+mkdir   		创建目录
+touch   		创建文件
+pwd     		显示当前目录
+cd      		打开目录
+ls      		显示文件
+vi      		编辑文件
+rm  			删除文件或目录
+cat     		查看文件内容
 
 
 ###### Vim：######
-esc     切换模式
-w       保存
-q       退出
-wq!     保存并退出(强制性)
-set number     显示行号
-f newfileName  重命名 
-w newfileName  写入新文件
+esc     		切换模式
+w       		保存
+q       		退出
+wq!     		保存并退出(强制性)
+set number     		显示行号
+f newfileName  		重命名
+w newfileName  		写入新文件
 
 
 
 
 
 ########## Git操作：##########
-git init   初始化Git仓库
-git add filename
-git rm  filename
-git commit -m "备注信息"
-git log    查看commit各版本
-git reflog 查看commit历史命令
-git reset --hard HEAD~i  回退到第i版本
+git init   	 		初始化Git仓库
+git add filename		添加文件到暂存区
+git rm  filename		删除文件
+git commit -m "备注信息"	将暂存区文件推送到分支
+git log    			查看commit各版本
+git reflog 			查看commit历史命令
+git reset --hard HEAD~i 	回退到第i版本
+git diff filename 		查看修改的地方
+git diff HEAD --filename   	查看工作区与版本库文件的区别
+git checkout -- filename 	撤销文件在工作区的修改(已添加到暂				  存区的文件不会变化)
 
