@@ -1,0 +1,29 @@
+######### 命令记录: #########
+mkdir   创建目录
+touch   创建文件
+pwd     显示当前目录
+cd      打开目录
+ls      显示文件
+vi      编辑文件
+
+
+
+
+###### Vim：######
+esc     切换模式
+w       保存
+q       退出
+wq!     保存并退出(强制性)
+set number     显示行号
+f newfileName  重命名 
+w newfileName  写入新文件
+
+
+
+
+
+########## Git操作：##########
+git init   初始化Git仓库
+git add filename
+git commit -m "remarks备注信息"
+
