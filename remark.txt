@@ -29,18 +29,20 @@ git rm  filename		从版本库中删除文件
 git commit -m "备注信息"	将暂存区文件提交到版本库分支
 git log    			查看commit各版本
 git log --graph 		查看分支合并图
+git log --graph --pretty=oneline --abbrev-commit
 git reflog 			查看commit历史命令
 git reset --hard HEAD~i 	回退到第i版本
 git diff filename 		查看修改的地方
 git diff HEAD --filename   	查看工作区与版本库中文件的区别
-git checkout -- filename 	撤销工作区的文件的修改
+git checkout -- filename 	撤销工作区中文件的修改
 git reset HEAD -- filename  	撤销暂存区中文件的修改并放回工作区
 git push origin master		将本地master分支推送到Github
 git branch branchName		创建分支branchName
 git checkout branchName		切换到分支branchName
 git checkout -b branchName	创建并切换到分支branchName
 git branch			查看当前分支
-git merge branchName		合并分支branchName到当前分支
+git merge branchName -m '备注'	合并分支branchName到当前分支
+git merge branchName --no-ff    非Fast forward模式合并分支
 git branch -d branchName	删除分支branchName
 
 
