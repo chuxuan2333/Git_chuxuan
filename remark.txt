@@ -28,6 +28,7 @@ git add filename		添加文件到暂存区
 git rm  filename		从版本库中删除文件
 git commit -m "备注信息"	将暂存区文件提交到版本库分支
 git log    			查看commit各版本
+git log --graph 		查看分支合并图
 git reflog 			查看commit历史命令
 git reset --hard HEAD~i 	回退到第i版本
 git diff filename 		查看修改的地方
