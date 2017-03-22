@@ -25,9 +25,10 @@ w newfileName  		写入新文件
 ########## Git操作：##########
 git init   	 		初始化Git仓库
 git add filename		添加文件到暂存区
+git add -f filename		强制添加
 git rm  filename		从版本库中删除文件
 git commit -m "备注信息"	将暂存区文件提交到版本库分支
-git log    			查看commit各版本
+git log -i   			查看commit各版本,-i参数可选
 git log --graph 		查看分支合并图
 git log --graph --pretty=oneline --abbrev-commit
 git reflog 			查看commit历史命令
@@ -37,7 +38,7 @@ git diff filename 		查看修改的地方
 git diff HEAD --filename   	查看工作区与版本库中文件的区别
 git checkout -- filename 	撤销工作区中文件的修改
 git reset HEAD -- filename  	撤销暂存区中文件的修改并放回工作区
-git push origin master		将本地master分支推送到Github
+git push origin master		将本地master分支推送到远程库Github
 git branch branchName		创建分支branchName
 git checkout branchName		切换到分支branchName
 git checkout -b branchName	创建并切换到分支branchName
@@ -45,14 +46,34 @@ git branch			查看当前分支
 git merge branchName -m '备注'	合并分支branchName到当前分支
 git merge branchName --no-ff    非Fast forward模式合并分支
 git branch -d branchName	删除分支branchName
+git branch -D branchName	强行删除分支
 git stash			保存当前工作现场
-git stash list			查看工作现场	
+git stash list			查看工作现场
 git stash apply 		恢复工作现场
 git stash apply stash@{i}	恢复第i个工作现场
 git stash drop 			删除工作现场
 git stash pop			恢复并删除工作现场
+git checkout -b branchName origin/branchName 创建本地与远程分支的链接
+git branch --set-upstream bName origin/bName 创建本地与远程分支的链接
+git pull			获取远程库最新的提交版本
+git remote -v 			查看远程库信息
+git tag <tagname>		创建一个标签
+git tag 			查看所有标签
+git tag <tagname> commitID	为指定commit id的版本创建标签
+git tag -s v1.2 -m "tips" commitID   -s 标签名 -m 备注信息
+git show <tagname>		查看标签信息
+git tag -d <tagname>  		删除本地标签
+git push origin :refs/tags/<tagname> 删除远程标签
+git push origin <tagname> 	推送一个标签
+git push origin --tags		推送全部标签
+git config --global color.ui ture 开启Git颜色显示
+git check-ignore -v filename	检查文件是否被ignore
+git config --global alias.st status 定义status的别名为st
 
 
+ssh-keygen -t rsa -C 'email@example.com'
+创建ssh-key,生成.ssh目录，里面有id_rsa和id_rsa.pub两个文件，是ssh-key的私钥和公钥.###登陆GitHub，打开“Account settings”，“SSH Keys”页面：
+点“Add SSH Key”，填上任意Title，在Key文本框里粘贴id_rsa.pub文件的内容.
 
 git remote add origin https://github.com/chuxuan2333/Git_chuxuan.git  
 将本地仓库与远程仓库关联起来.
@@ -64,4 +85,6 @@ git clone git@github.com:chuxuan2333/gitskills.git
 使用ssh克隆远程分支
 git clone https://github.com/chuxuan2333/gitskills.git
 使用http协议克隆远程分支
+
+在Git根目录下创建.gitignore文件，将需要被忽略的文件名写入，被忽略的文件将不会被提交到版本库中，.gitignore文件参考https://github.com/gitignore,.gitignore文件需要提交到版本库中.
 
