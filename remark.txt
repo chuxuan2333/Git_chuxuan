@@ -31,6 +31,7 @@ git log    			查看commit各版本
 git log --graph 		查看分支合并图
 git log --graph --pretty=oneline --abbrev-commit
 git reflog 			查看commit历史命令
+git status 			查看工作区状态
 git reset --hard HEAD~i 	回退到第i版本
 git diff filename 		查看修改的地方
 git diff HEAD --filename   	查看工作区与版本库中文件的区别
@@ -44,6 +45,13 @@ git branch			查看当前分支
 git merge branchName -m '备注'	合并分支branchName到当前分支
 git merge branchName --no-ff    非Fast forward模式合并分支
 git branch -d branchName	删除分支branchName
+git stash			保存当前工作现场
+git stash list			查看工作现场	
+git stash apply 		恢复工作现场
+git stash apply stash@{i}	恢复第i个工作现场
+git stash drop 			删除工作现场
+git stash pop			恢复并删除工作现场
+
 
 
 git remote add origin https://github.com/chuxuan2333/Git_chuxuan.git  
