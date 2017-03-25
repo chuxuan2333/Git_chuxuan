@@ -1,12 +1,30 @@
 ######### 命令记录: #########
-mkdir   		创建目录
+mkdir   		创建目录,-m权限, -p创建空路径
 touch   		创建文件
 pwd     		显示当前目录
 cd      		打开目录
 ls      		显示文件
 vi      		编辑文件
-rm  			删除文件或目录
-cat     		查看文件内容
+rm  			删除文件或目录 -i -r -f
+rmdir			删除空目录
+mv 			移动文件或修改文件名
+cat     		查看文件内容,创建、合并  -b -n
+more			一页页显示文件
+chmod			修改文件权限
+cp -i a.txt test	复制a.txt到test目录,覆盖前提示
+locate			搜索
+find			查找	
+tar			打包
+chown			改变文件拥有着
+df 			显示磁盘使用情况
+du 			查看文件和目录使用情况
+ln 			为文件创建一个链接
+date			显示或设置时间
+cal 			显示日历
+grep			正则搜索
+wc			统计文件的字节、字数、行数等
+ps			查看当前进程状态
+
 
 
 ###### Vim：######
